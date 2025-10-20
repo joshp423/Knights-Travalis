@@ -1,18 +1,17 @@
-import { Node } from "./node";
-import { Tree } from "../BinarySearchTrees/Tree";
-import { createDecisionArray } from "./createDecisionArray";
+import { Node } from "./node.js";
+import { Tree } from "../BinarySearchTrees/Tree.js";
+import { createDecisionArray } from "./createDecisionArray.js";
+import { actualCoordinates } from "./main.js";
 
 //recursive create tree function
-export function createGridGraph(coords, target) {
-    //set up grid nodes
+export function createDecisionTree(input, target) {
+    if (input === target) return null;
 
+    let root = new Node(actualCoordinates(input))
+    root.options = createDecisionArray(input);
+    root.options.forEach((option) => {
+        const newNode = createDecisionArray(option);
+    })
 
-    // base case
-    if (root === target) return null;
-
-
-    
-    
-
-
+    return root;
 }

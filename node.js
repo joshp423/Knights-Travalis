@@ -1,5 +1,4 @@
-import { actualCoordinates } from "./main";
-import { createDecisionArray } from "./createDecisionArray";
+import { createDecisionArray } from "./createDecisionArray.js";
 
 export class Node {
   constructor(input) {
@@ -7,8 +6,6 @@ export class Node {
       throw Error("You must use the 'new' operator to call the constructor");
     }
     this.coords = [input[0], input[1]];
-    //array of pointers?
-    const options = createDecisionArray(actualCoordinates(input))
-    
+    this.options = createDecisionArray(input);
   }
 }
