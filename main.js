@@ -11,13 +11,13 @@ const grid = [
 
 // console.log(grid);
 console.log(grid[7][2])
-
-export function actualCoordinates(currentY, currentX) {
-    let actualYX = [[Math.abs(currentY - 7)][Math.abs(currentX - 7)]];
+const input = [7, 2]
+export function actualCoordinates(input) {
+    let actualYX = [Math.abs(input[0] - 7), Math.abs(input[1] - 7)];
     return actualYX;
 }
 
-console.log(adjustedCoords(7, 2))
+console.log(actualCoordinates(input))
 function decisonsArray(currentY, currentX) {
     let i = currentY
     let j = currentX
