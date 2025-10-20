@@ -3,4 +3,4 @@ import { knightMoves } from "./knightMoves.js";
 // console.log(grid);
 const input = [0, 0]
 
-console.log(knightMoves(input, [7, 7]))
+knightMoves(input, [7, 7])

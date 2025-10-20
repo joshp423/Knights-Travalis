@@ -10,7 +10,6 @@ function isVisited(visited, target){
 };
 
 export function knightMoves(input, target){
-
   //set up queue as input and then nested path we took to get there
   const queue = [[input, [input]]];
   
@@ -31,7 +30,10 @@ export function knightMoves(input, target){
 
     //if current is the target stop the loop and return the path
     if (current[0] === target[0] && current[1] === target[1]){
-      return path;
+      const outputString = `=> You made it in ${path.length - 1} moves! Here's your path:`
+      console.log(outputString);
+      console.log(path);
+      return;
     }
 
     //load valid decisions of current into variable
